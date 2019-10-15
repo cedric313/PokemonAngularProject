@@ -4,11 +4,12 @@ import {Directive, ElementRef, HostListener, Input} from '@angular/core';
   selector: '[pkmnBorderCard]'
 })
 export class BorderCardDirective {
-  @Input('pkmnBorderCard') borderColor: string;
 
   private initialColor: string = "#f5f5f5";
   private defaultColor: string = "#009688";
   private defaultHeight: number = 180;
+
+  @Input('pkmnBorderCard') borderColor: string;
 
   constructor(private el: ElementRef) {
     this.setBorder(this.initialColor);
